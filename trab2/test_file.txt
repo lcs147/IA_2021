@@ -1,3 +1,0 @@
-alo1 alo2 alo3
-alo4 alo5 alo6
-alo7 alo8 alo9

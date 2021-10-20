@@ -1,2 +1,0 @@
-textFileToListOfString('test_file.txt', X).
-X = [[[alo, alo, alo]], [[alo, alo, alo2]], [[alo, alo, alo3]]].
