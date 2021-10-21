@@ -7,6 +7,7 @@ is_known_word(X, R) :-
     verbo(_, [X], []), R = [], !;
     adjetivo(_, _, [X], []), R = [], !;
     numeral(_, _, [X], []), R = [], !;
+    numeral(_, [X], []), R = [], !;
     adverbio(_, _, [X], []), R = [], !;
     preposicao(_, _, [X], []), R = [], !;
     conjuncao([X], []), R = [], !;

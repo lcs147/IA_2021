@@ -894,6 +894,11 @@ substantivo(singular, masculino) --> [curso].
 substantivo(singular, masculino) --> [custo].
 substantivo(singular, femenino) --> ['descrição'].
 substantivo(singular, masculino) --> [davos].
+substantivo(singular, masculino) --> ['marqueteiro(s)'].
+substantivo(singular, masculino) --> ['marqueteiro'].
+substantivo(singular, masculino) --> ['S'].
+substantivo(singular, femenino) --> ['CF/88'].
+substantivo(plural, femenino) --> ['câmaras/parlamentos'].
 
 
 %VERBO
@@ -2490,6 +2495,7 @@ adjetivo(plural, masculino)--> [despertos].
 numeral(plural,femenino) --> ['duas'].
 numeral(plural,masculino) --> ['dois'].
 numeral(plural,masculino) --> ['milhões'].
+numeral(singular) --> ['R$10'].
 numeral(singular) --> [0].
 numeral(singular) --> [1].
 numeral(singular) --> [1,7].
@@ -2556,6 +2562,10 @@ numeral(singular) --> ['meio'].
 
 %ADVERBIO
 
+adverbio(singular,neutro) --> ['etc'].
+adverbio(singular,neutro) --> ['etc.'].
+adverbio(singular,neutro) --> ['Etc.'].
+adverbio(singular,neutro) --> ['Etc'].
 adverbio(singular,neutro) --> [frequentemente].
 adverbio(singular,neutro) --> [inclusive].
 adverbio(singular,neutro) --> [independentemente].

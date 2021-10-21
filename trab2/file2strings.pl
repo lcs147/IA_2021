@@ -81,6 +81,13 @@ get_only_words([_|T],W,W,Wds) :-
 
 % -------------------------------------------------
 valid_char(C):-
+    C \== 37, % %
+    C \== 33, % !
+    C \== 39, % aspas simples
+    C \== 34, % "
+    C \== 63, % interrogação
+    C \== 40,  % parenteses
+    C \== 41,  % parenteses 2
     C \== 10,  % enter ou return
     C \== 32,  % branco
     C \== 46,  % ponto
