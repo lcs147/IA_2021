@@ -2490,7 +2490,6 @@ adjetivo(plural, masculino)--> [despertos].
 numeral(plural,femenino) --> ['duas'].
 numeral(plural,masculino) --> ['dois'].
 numeral(plural,masculino) --> ['milhões'].
-numeral(X,singular) --> [X], {0 =< X}.
 numeral(singular) --> [0].
 numeral(singular) --> [1].
 numeral(singular) --> [1,7].
