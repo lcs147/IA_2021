@@ -3,7 +3,7 @@ import uol_redacoes_xml
 nltk.download('punkt')
 
 out = open("data/textos/textos.txt", "w")
-num_redacoes = 100
+num_redacoes = 500
 
 essays = uol_redacoes_xml.load()[0:num_redacoes]
 total = len(essays)
