@@ -5,7 +5,7 @@ ordem em que os comandos tem que ser executados para checar as frases
     halt.
     python3 cria_regras_desconhecidas.py
     prolog -s file2strings.pl gramaticaLP.pl adiciona_desconhecidas.pl new_lexicon.pl
-    add_unknow_words('data/textos/textos.txt', 'data/textos/desconhecidas.txt').
+    add_unknow_words('data/textos/textos.txt', 'data/textos/desconhecidas2.txt').
     checa_texto('data/textos/textos.txt', Qtd_validas, Qtd_total).
 
 starta o database antigo
