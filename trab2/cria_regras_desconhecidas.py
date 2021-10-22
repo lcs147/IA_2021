@@ -28,7 +28,8 @@ def converte(x):
             'PUNCT':'pontuacao',
             'NUM':'numeral',
             'SYM':"simbolo",
-            'X':'outro'}
+            'X':'outro',
+            'PART':'adverbio'}
     if x in mapa:
         return mapa[x]
 
@@ -57,6 +58,8 @@ def adiciona_ao_banco(word, classe, genero, numero):
         ret = "artigo({}, {}) --> ['{}'].".format(numero, genero, word)
     elif(classe == 'pronome'):
         if(genero == None):
+            if(numero == None):
+                numero = 'singular'
             ret = "pronome({}) --> ['{}'].".format(numero, word)
         else:
             if(numero == None):

@@ -73,6 +73,7 @@ adjetivo(plural, femenino)--> ['constrangedoras'].
 adjetivo(plural, femenino)--> ['corriqueiras'].
 adjetivo(plural, femenino)--> ['corruptas'].
 adjetivo(plural, femenino)--> ['cotidianas'].
+adjetivo(plural, femenino)--> ['culturais'].
 adjetivo(plural, femenino)--> ['célebres'].
 
 adjetivo(plural, femenino)--> ['desonestas'].
@@ -124,7 +125,9 @@ adjetivo(plural, femenino)--> ['moradoras'].
 adjetivo(plural, femenino)--> ['más'].
 adjetivo(plural, femenino)--> ['necessárias'].
 adjetivo(plural, femenino)--> ['objetivas'].
+adjetivo(plural, femenino)--> ['obrigatórias'].
 adjetivo(plural, femenino)--> ['parciais'].
+adjetivo(plural, femenino)--> ['parlamentos'].
 adjetivo(plural, femenino)--> ['pessimistas'].
 adjetivo(plural, femenino)--> ['políticas'].
 adjetivo(plural, femenino)--> ['populares'].
@@ -157,6 +160,7 @@ adjetivo(plural, femenino)--> ['sujeitas'].
 adjetivo(plural, femenino)--> ['superficiais'].
 adjetivo(plural, femenino)--> ['sutis'].
 adjetivo(plural, femenino)--> ['sócias'].
+adjetivo(plural, femenino)--> ['teóricas'].
 adjetivo(plural, femenino)--> ['tradicionais'].
 adjetivo(plural, femenino)--> ['trazidas'].
 adjetivo(plural, femenino)--> ['urbanas'].
@@ -415,6 +419,7 @@ adjetivo(plural, masculino)--> ['atuais'].
 adjetivo(plural, masculino)--> ['autoritários'].
 adjetivo(plural, masculino)--> ['britânicos'].
 adjetivo(plural, masculino)--> ['básicos'].
+adjetivo(plural, masculino)--> ['cardiovasculares'].
 adjetivo(plural, masculino)--> ['carentes'].
 adjetivo(plural, masculino)--> ['colaterais'].
 adjetivo(plural, masculino)--> ['coletivos'].
@@ -693,6 +698,7 @@ adjetivo(singular, femenino)--> ['má'].
 adjetivo(singular, femenino)--> ['nazista'].
 adjetivo(singular, femenino)--> ['necessária'].
 adjetivo(singular, femenino)--> ['negativa'].
+adjetivo(singular, femenino)--> ['obrigatória'].
 adjetivo(singular, femenino)--> ['operacional'].
 adjetivo(singular, femenino)--> ['paira'].
 adjetivo(singular, femenino)--> ['passiva'].
@@ -1198,6 +1204,7 @@ adjetivo(singular, masculino) --> [psiquiatra].
 
 adjetivo(singular, masculino)--> ['5º'].
 adjetivo(singular, masculino)--> ['Islâmico'].
+adjetivo(singular, masculino)--> ['Necessário'].
 adjetivo(singular, masculino)--> ['XIX'].
 adjetivo(singular, masculino)--> ['XX'].
 adjetivo(singular, masculino)--> ['XXI'].
@@ -1381,6 +1388,7 @@ adjetivo(singular, masculino)--> ['social'].
 adjetivo(singular, masculino)--> ['socialmente'].
 adjetivo(singular, masculino)--> ['solidário'].
 adjetivo(singular, masculino)--> ['sozinho'].
+adjetivo(singular, masculino)--> ['subjetivo'].
 adjetivo(singular, masculino)--> ['suja'].
 adjetivo(singular, masculino)--> ['sujeito'].
 adjetivo(singular, masculino)--> ['superior'].
@@ -1647,6 +1655,7 @@ adverbio(singular,neutro) --> ['recentemente'].
 adverbio(singular,neutro) --> ['sempre'].
 adverbio(singular,neutro) --> ['sequer'].
 adverbio(singular,neutro) --> ['significante'].
+adverbio(singular,neutro) --> ['significativamente'].
 adverbio(singular,neutro) --> ['sim'].
 adverbio(singular,neutro) --> ['simplesmente'].
 adverbio(singular,neutro) --> ['so'].
@@ -1802,7 +1811,6 @@ conjuncao --> ['Para'].
 conjuncao --> ['Pois'].
 conjuncao --> ['Quando'].
 conjuncao --> ['Se'].
-conjuncao --> ['e/ou'].
 conjuncao --> ['embora'].
 conjuncao --> ['entretanto'].
 conjuncao --> ['já'].
@@ -1938,6 +1946,7 @@ numeral(singular) --> ['70%'].
 
 numeral(singular) --> ['88%'].
 
+numeral(singular) --> ['88'].
 numeral(singular) --> ['90'].
 numeral(singular) --> ['94'].
 numeral(singular) --> ['Quatro'].
@@ -2501,6 +2510,7 @@ substantivo(plural, femenino) --> ['crianças'].
 substantivo(plural, femenino) --> ['cristalinas'].
 substantivo(plural, femenino) --> ['críticas'].
 substantivo(plural, femenino) --> ['culturas'].
+substantivo(plural, femenino) --> ['câmaras'].
 substantivo(plural, femenino) --> ['câmaras/parlamentos'].
 
 substantivo(plural, femenino) --> ['decisões'].
@@ -2526,6 +2536,7 @@ substantivo(plural, femenino) --> ['eleições'].
 
 substantivo(plural, femenino) --> ['emoções'].
 
+substantivo(plural, femenino) --> ['enfermidades'].
 substantivo(plural, femenino) --> ['engrenagens'].
 substantivo(plural, femenino) --> ['entidades'].
 substantivo(plural, femenino) --> ['entrevistas'].
@@ -2548,9 +2559,11 @@ substantivo(plural, femenino) --> ['falhas'].
 substantivo(plural, femenino) --> ['famílias'].
 substantivo(plural, femenino) --> ['fascistas'].
 substantivo(plural, femenino) --> ['façanhas'].
+substantivo(plural, femenino) --> ['feiras'].
 substantivo(plural, femenino) --> ['figuras'].
 substantivo(plural, femenino) --> ['filas'].
 substantivo(plural, femenino) --> ['filhas'].
+substantivo(plural, femenino) --> ['finalidades'].
 substantivo(plural, femenino) --> ['fiscalizações'].
 substantivo(plural, femenino) --> ['fontes'].
 substantivo(plural, femenino) --> ['fortunas'].
@@ -2605,6 +2618,7 @@ substantivo(plural, femenino) --> ['notícias'].
 substantivo(plural, femenino) --> ['obras'].
 substantivo(plural, femenino) --> ['obrigações'].
 substantivo(plural, femenino) --> ['ofensas'].
+substantivo(plural, femenino) --> ['oficinas'].
 substantivo(plural, femenino) --> ['opiniões'].
 substantivo(plural, femenino) --> ['oportunidades'].
 substantivo(plural, femenino) --> ['oratórias'].
@@ -2619,6 +2633,7 @@ substantivo(plural, femenino) --> ['perspectivas'].
 substantivo(plural, femenino) --> ['piadas'].
 substantivo(plural, femenino) --> ['plataformas'].
 substantivo(plural, femenino) --> ['politicas'].
+substantivo(plural, femenino) --> ['populações'].
 substantivo(plural, femenino) --> ['posições'].
 substantivo(plural, femenino) --> ['pracinhas'].
 substantivo(plural, femenino) --> ['praças'].
@@ -2861,6 +2876,7 @@ substantivo(plural, feminino) --> [primeiras].
 
 substantivo(plural, feminino) --> [prospostas].
 
+substantivo(plural, masculino) --> ['Artes'].
 substantivo(plural, masculino) --> ['Atos'].
 substantivo(plural, masculino) --> ['Bilionários'].
 substantivo(plural, masculino) --> ['Brasileiros'].
@@ -3038,6 +3054,7 @@ substantivo(plural, masculino) --> ['hormônios'].
 
 substantivo(plural, masculino) --> ['ideais'].
 substantivo(plural, masculino) --> ['impactos'].
+substantivo(plural, masculino) --> ['impasses'].
 substantivo(plural, masculino) --> ['incentivos'].
 substantivo(plural, masculino) --> ['incisos'].
 substantivo(plural, masculino) --> ['indigentes'].
@@ -3100,6 +3117,7 @@ substantivo(plural, masculino) --> ['níveis'].
 substantivo(plural, masculino) --> ['números'].
 
 substantivo(plural, masculino) --> ['objetivos'].
+substantivo(plural, masculino) --> ['opcionais'].
 substantivo(plural, masculino) --> ['opositores'].
 substantivo(plural, masculino) --> ['organismos'].
 substantivo(plural, masculino) --> ['parentes'].
@@ -3400,6 +3418,7 @@ substantivo(singular, femenino) --> ['USP'].
 substantivo(singular, femenino) --> ['União'].
 substantivo(singular, femenino) --> ['Voltaire'].
 substantivo(singular, femenino) --> ['abri'].
+substantivo(singular, femenino) --> ['abstração'].
 substantivo(singular, femenino) --> ['academia'].
 substantivo(singular, femenino) --> ['acusação'].
 substantivo(singular, femenino) --> ['administração'].
@@ -3755,6 +3774,7 @@ substantivo(singular, femenino) --> ['natureza'].
 substantivo(singular, femenino) --> ['necessidade'].
 substantivo(singular, femenino) --> ['negligência'].
 substantivo(singular, femenino) --> ['neutralidade'].
+substantivo(singular, femenino) --> ['norma'].
 substantivo(singular, femenino) --> ['noticia'].
 substantivo(singular, femenino) --> ['obrigatoriedade'].
 substantivo(singular, femenino) --> ['observância'].
@@ -4445,6 +4465,7 @@ substantivo(singular, masculino) --> ['Brizola'].
 substantivo(singular, masculino) --> ['Bruto'].
 substantivo(singular, masculino) --> ['Buffet'].
 substantivo(singular, masculino) --> ['Buffett'].
+substantivo(singular, masculino) --> ['CF'].
 substantivo(singular, masculino) --> ['Casa'].
 substantivo(singular, masculino) --> ['Chaplin'].
 substantivo(singular, masculino) --> ['Charles'].
@@ -4486,6 +4507,7 @@ substantivo(singular, masculino) --> ['Fato'].
 substantivo(singular, masculino) --> ['Federal'].
 substantivo(singular, masculino) --> ['Fernando'].
 substantivo(singular, masculino) --> ['Freire'].
+substantivo(singular, masculino) --> ['Física'].
 substantivo(singular, masculino) --> ['Gandhi'].
 substantivo(singular, masculino) --> ['Gates'].
 substantivo(singular, masculino) --> ['Gatorades'].
@@ -4624,6 +4646,7 @@ substantivo(singular, masculino) --> ['acesso'].
 substantivo(singular, masculino) --> ['achismo'].
 substantivo(singular, masculino) --> ['acontecimento'].
 substantivo(singular, masculino) --> ['adendo'].
+substantivo(singular, masculino) --> ['advento'].
 substantivo(singular, masculino) --> ['adversário'].
 
 substantivo(singular, masculino) --> ['advogado'].
@@ -4758,6 +4781,7 @@ substantivo(singular, masculino) --> ['discernimento'].
 substantivo(singular, masculino) --> ['discurso'].
 substantivo(singular, masculino) --> ['discórdia'].
 substantivo(singular, masculino) --> ['dispositivo'].
+substantivo(singular, masculino) --> ['distinto'].
 substantivo(singular, masculino) --> ['ditado'].
 substantivo(singular, masculino) --> ['divertimento'].
 substantivo(singular, masculino) --> ['diálogo'].
@@ -4837,6 +4861,7 @@ substantivo(singular, masculino) --> ['governo'].
 substantivo(singular, masculino) --> ['greves'].
 substantivo(singular, masculino) --> ['gênero'].
 substantivo(singular, masculino) --> ['hacker'].
+substantivo(singular, masculino) --> ['horário'].
 substantivo(singular, masculino) --> ['hospitaleiro'].
 substantivo(singular, masculino) --> ['imediato'].
 substantivo(singular, masculino) --> ['impasse'].
@@ -5005,6 +5030,7 @@ substantivo(singular, masculino) --> ['representante'].
 substantivo(singular, masculino) --> ['respeito'].
 substantivo(singular, masculino) --> ['responsável'].
 substantivo(singular, masculino) --> ['retrocesso'].
+substantivo(singular, masculino) --> ['risco'].
 substantivo(singular, masculino) --> ['romance'].
 substantivo(singular, masculino) --> ['roubo'].
 substantivo(singular, masculino) --> ['rumo'].
@@ -5014,6 +5040,7 @@ substantivo(singular, masculino) --> ['salário'].
 substantivo(singular, masculino) --> ['samaritano'].
 substantivo(singular, masculino) --> ['sangue'].
 substantivo(singular, masculino) --> ['sargento'].
+substantivo(singular, masculino) --> ['sedentarismo'].
 substantivo(singular, masculino) --> ['segredo'].
 substantivo(singular, masculino) --> ['seguinte'].
 substantivo(singular, masculino) --> ['senso'].
@@ -5723,6 +5750,7 @@ verbo(plural) --> ['denigrem'].
 verbo(plural) --> ['depositaram'].
 verbo(plural) --> ['derivam'].
 verbo(plural) --> ['desafiam'].
+verbo(plural) --> ['desejam'].
 verbo(plural) --> ['desempenharam'].
 verbo(plural) --> ['desenvolvidas'].
 verbo(plural) --> ['desenvolvidos'].
@@ -5815,6 +5843,7 @@ verbo(plural) --> ['gravados'].
 verbo(plural) --> ['haviam'].
 verbo(plural) --> ['há'].
 
+verbo(plural) --> ['identificam'].
 verbo(plural) --> ['ignoradas'].
 verbo(plural) --> ['importam'].
 verbo(plural) --> ['importamos'].
@@ -5939,6 +5968,7 @@ verbo(plural) --> ['relatam'].
 verbo(plural) --> ['repetem-se'].
 verbo(plural) --> ['representam'].
 verbo(plural) --> ['requeridas'].
+verbo(plural) --> ['resolvam'].
 verbo(plural) --> ['resolvermos'].
 verbo(plural) --> ['respeitam'].
 verbo(plural) --> ['retiradas'].
@@ -7099,6 +7129,7 @@ verbo(singular) --> ['injustiçado'].
 verbo(singular) --> ['injustiçar'].
 verbo(singular) --> ['inserir'].
 verbo(singular) --> ['insistia'].
+verbo(singular) --> ['integrando'].
 verbo(singular) --> ['inteira'].
 verbo(singular) --> ['interessada'].
 verbo(singular) --> ['interfere'].
@@ -7135,6 +7166,7 @@ verbo(singular) --> ['liberada'].
 verbo(singular) --> ['liberta'].
 verbo(singular) --> ['liderado'].
 verbo(singular) --> ['ligada'].
+verbo(singular) --> ['ligado'].
 verbo(singular) --> ['ludibriar'].
 verbo(singular) --> ['lutando'].
 verbo(singular) --> ['mandado'].
@@ -7146,6 +7178,7 @@ verbo(singular) --> ['manipulou'].
 verbo(singular) --> ['mantendo'].
 verbo(singular) --> ['manter-se'].
 verbo(singular) --> ['manteria'].
+verbo(singular) --> ['mantida'].
 verbo(singular) --> ['maquiada'].
 verbo(singular) --> ['marcar'].
 verbo(singular) --> ['melhore'].
@@ -7195,6 +7228,7 @@ verbo(singular) --> ['oferece'].
 verbo(singular) --> ['oferecendo'].
 verbo(singular) --> ['oferecido'].
 verbo(singular) --> ['omitir'].
+verbo(singular) --> ['onerar'].
 verbo(singular) --> ['opinar'].
 verbo(singular) --> ['oprimida'].
 verbo(singular) --> ['optar'].
@@ -7284,6 +7318,7 @@ verbo(singular) --> ['prevalecer'].
 verbo(singular) --> ['prevaleceu'].
 verbo(singular) --> ['prevaleça'].
 verbo(singular) --> ['prevenir'].
+verbo(singular) --> ['previne'].
 verbo(singular) --> ['prevista'].
 verbo(singular) --> ['prevê'].
 verbo(singular) --> ['prezar'].
@@ -7442,6 +7477,7 @@ verbo(singular) --> ['subir'].
 verbo(singular) --> ['submeter-se'].
 verbo(singular) --> ['submetida'].
 verbo(singular) --> ['subornar'].
+verbo(singular) --> ['substituído'].
 verbo(singular) --> ['sugerido'].
 verbo(singular) --> ['sujeira'].
 verbo(singular) --> ['suportar'].
@@ -7456,6 +7492,7 @@ verbo(singular) --> ['telhado'].
 verbo(singular) --> ['tem'].
 verbo(singular) --> ['tem-se'].
 verbo(singular) --> ['temer'].
+verbo(singular) --> ['tende'].
 verbo(singular) --> ['tendo'].
 verbo(singular) --> ['tenha'].
 verbo(singular) --> ['tenta'].
