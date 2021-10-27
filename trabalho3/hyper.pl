@@ -46,9 +46,9 @@ eval(Hyp, Cost) :-
 size([],0).
 size([Cs0/Vs0 | RestHyp], Size) :-
     lenght(Cs0, L0),
-    length(Vs0, N0),
-    size(RestHyp, sizeRest),
-    Size is 10*L0 + N0 + sizeRest.
+    length( Vs0, N0),
+    size( RestHyp, SizeRest),
+    Size is 10*L0 + N0 + SizeRest.
 
 covers_neg(Hyp, N) :-
     findall(1, (nex(E), once(prove(E, Hyp, Answ)), Answ \== no), L),
