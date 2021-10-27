@@ -136,7 +136,7 @@ non_rendundant([Lit1|Lits]) :-
     \+ literal_member(Lit1, Lits),
     non_redundant(Lits).
 
-literal_member(X, [X1|X2]) :-
+literal_member(X, [X1|Xs]) :-
     X == X1,!
     ;
     literal_member(X, Xs).
