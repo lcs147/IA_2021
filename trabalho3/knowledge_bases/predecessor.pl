@@ -2,8 +2,8 @@
 backliteral([atom(X), parent(X, Y)], [X, Y]).
 backliteral([atom(X), predecessor(X, Y)], [X, Y]).
 
-prolog_predicate(parent(X,Y)).
-prolog_predicate(atom(X)).
+prolog_predicate(parent(_,_)).
+prolog_predicate(atom(_)).
 
 parent(pam, bob).
 parent(tom, bob).

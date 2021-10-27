@@ -62,7 +62,7 @@ start_hyps(Hyps) :-
     setof(C:H,
         (   start_hyp(H,M), add1(generated),
             complete(H, add1(complete), eval(H,C)),
-            Hyps).
+            Hyps)).
 
 start_hyp([], _).
 start_hyp([C|Cs], M) :-

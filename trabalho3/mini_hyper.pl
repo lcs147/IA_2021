@@ -24,7 +24,9 @@ prove(G, Hyp, D0, D) :-
     prove(Body, Hyp, D1, D).
 
 induce(Hyp) :-
-    iter_deep(Hyp, 0).
+    init_counts, !,
+    iter_deep(Hyp, 0),
+    !, show_counts.
 
 iter_deep(Hyp, MaxD) :-
     write('MaxD = '), write(MaxD), nl,
@@ -41,7 +43,9 @@ depth_first(Hyp, Hyp, _) :-
 depth_first(Hyp0, Hyp, MaxD0) :-
     MaxD0 > 0,
     MaxD1 is MaxD0 - 1,
+    add1(refined),
     refine_hyp(Hyp0, Hyp1),
+    add1(generated),
     complete(Hyp1),
     depth_first(Hyp1, Hyp, MaxD1).
 
@@ -80,3 +84,19 @@ refine(Clause, Args, NewClause, NewArgs) :-
 
 max_proof_lenght(6).
 max_clause_lenght(3).
+
+init_counts :-
+    retract(counter(_,_)), fail
+    ;
+    assert(counter(generated, 0)),
+    assert(counter(refined, 0)).
+
+add1(Counter) :-
+    retract(counter(Counter, N)), !,
+    N1 is N + 1,
+    assert(counter(Counter, N1)).
+
+show_counts :-
+    counter(generated, NG), counter(refined, NR),
+    nl, write('Hypotheses generated: '), write(NG),
+    nl, write('Hypotheses refined: '), write(NR).
