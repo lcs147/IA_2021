@@ -36,7 +36,7 @@ best_search([Hyp|Hyps], Hyp) :-
     complete(H).
 
 best_search([C0:H0 | Hyps0], H) :-
-    write('Refining hypo with cost'), write(C0),
+    write('Refining hypo with cost '), write(C0),
     write(:), nl, show_hyp(H0), nl,
     all_refinements(H0, NewHs),
     add_hyps(NewHs, Hyps0, Hyps), !,
@@ -54,17 +54,11 @@ all_refinements(H0, Hyps) :-
             Hyps).
 
 add_hyps(Hyps1, Hyps2, Hyps) :-
-    mergesort(hyps1, OrderedHyps1),
+    mergesort(Hyps1, OrderedHyps1),
     merge(Hyps2, OrderedHyp1, Hyps).
 
-not(A,B,C):-
-    A,
-    B,
-    C, !, fail.
-not(_,_,_).
-
 complete(Hyp) :-
-    not(ex(P),
+    \+ (ex(P),
         once(prove(P, Hyp, Answ)),
         Answ \== yes).
 
@@ -106,7 +100,7 @@ start_hyp([C|Cs], M) :-
 refine_hyp(Hyp0, Hyp) :-
     choose_clause(Hyp0, Clause0/Vars0, Clauses1, Clauses2),
     append(Clauses1, [CLause/Vars | Clauses2], Hyp),
-    refine(Clauuse0, Vars0, Clause, Vars),
+    refine(Clause0, Vars0, Clause, Vars),
     non_redundant(Clause),
     \+ unsatisfiable(Clause, Hyp).
 
@@ -123,7 +117,7 @@ refine(Clause, Args, Clause, NewArgs) :-
     member(A, Args2),
     append(Args1, Args2, NewArgs).
 
-refine(Clause, Args0, CLause, Args) :-
+refine(Clause, Args0, Clause, Args) :-
     delete(Var:Type, Args0, Args1),
     term(Type, Var, Vars),
     append(Args1, Vars, Args).
@@ -182,6 +176,7 @@ merge([X1|L1], [X2|L2], [X1|L3]) :-
 merge(L1, [X2|L2], [X2|L3]) :-
     merge(L1, L2, L3).
 mergesort([],[]) :- !.
+mergesort([X],[X]) :- !.
 mergesort(L, S) :-
     split(L, L1, L2),
     mergesort(L1, S1),
@@ -202,7 +197,7 @@ init_counts :-
 
 add1(Counter) :-
     retract(counter(Counter, N)), !, N1 is N + 1,
-    assert(counter(COunter, N1)).
+    assert(counter(Counter, N1)).
 
 show_counts :-
     counter(generated, NG), counter(refined, NR), counter(complete, NC),

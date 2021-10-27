@@ -1,8 +1,19 @@
-backliteral( isa(X, Y), [X:object], []) :-
-    member( Y, [polygon, convex_poly, stable_poly, unstable_poly, triangule, rectangle, trapezium, unstable_triangule, hexagon]).
+backliteral(isa(X, Y), [X:object], []) :-
+    member(Y,
+           
+           [ polygon,
+             convex_poly,
+             stable_poly,
+             unstable_poly,
+             triangule,
+             rectangle,
+             trapezium,
+             unstable_triangule,
+             hexagon
+           ]).
 
-backliteral( support(X,Y), [X:object, Y:object], []).
-backliteral( touch(X,Y), [X:object, Y:object], []).
+backliteral(support(X, Y), [X:object, Y:object], []).
+backliteral(touch(X, Y), [X:object, Y:object], []).
 backliteral( \+(G), [X:object, Y:object], []) :-
     G = touch(X,Y); G = support(X,Y).
 
@@ -14,11 +25,11 @@ prolog_predicate( \+(G)).
 ako( polygon, convex_poly).
 ako( convex_poly, stable_poly).
 ako( convex_poly, unstable_poly).
-ako( convex_poly, triangule).
-ako( convex_poly, rectangle).
-ako( convex_poly, trapezium).
-ako( convex_poly, unstable_triangule).
-ako( convex_poly, hexagon).
+ako( stable_poly, triangule).
+ako( stable_poly, rectangle).
+ako( stable_poly, trapezium).
+ako( unstable_poly, unstable_triangule).
+ako( unstable_poly, hexagon).
 
 ako( rectangle, X) :-
     member( X, [a1,a2,a3,a4,a5,b1,b2,b3,b4,b5,c1,c2,c3]).
@@ -33,10 +44,15 @@ isa( Fig0, Fig) :-
     ako( Fig1, Fig0),
     isa( Fig1, Fig).
 
-support(a1,c1).     support(b1,c1).
-support(a3,c3).     support(b3,c3).     touch(a3,b3).
-support(a4,c4).     support(b4,c4).
-support(a5,c5).     support(b5,c5).
+support(a1,c1).
+support(b1,c1).
+support(a3,c3).
+support(b3,c3).
+support(a4,c4).
+support(b4,c4).
+support(a5,c5).
+support(b5,c5).
+touch(a3,b3).
 
 start_clause( [ arch(X,Y,Z)] / [X:object,Y:object,Z:object]).
 
