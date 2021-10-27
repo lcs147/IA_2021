@@ -1,5 +1,30 @@
 :- op(500, xfx, :).
 
+prove(Goal, Hypo, Answer) :-
+    max_proof_lenght(D),
+    prove(Goal, Hypo, D, RestD),
+    (RestD >=0, Answer = yes
+    ;
+     RestD<0, !, Answer = maybe
+    ).
+prove(Goal, _, no).
+prove(G, H, D, D) :- 
+    D<0, !.
+prove([], _, D, D) :- !.
+prove([G1|Gs], Hypo, D0, D) :- !,
+    prove(G1, Hypo, D0, D1),
+    prove(Gs, Hypo, D1, D).
+prove(G, _, D, D) :-
+    prolog_predicate(G),
+    call(G).
+prove(G, Hyp, D0, D) :-
+    D0 =< 0, !, D is D0-1;
+    D1 is D0-1,
+    member(Clause/Vars, Hyp),
+    copy_term(Clause, [Head|Body]),
+    G = Head,
+    prove(Body, Hyp, D1, D).
+
 induce(Hyp) :-
     init_counts, !,
     start_hyps(Hyps),
@@ -13,7 +38,7 @@ best_search([Hyp|Hyps], Hyp) :-
 best_search([C0:H0 | Hyps0], H) :-
     write('Refining hypo with cost'), write(C0),
     write(:), nl, show_hyp(H0), nl,
-    all_refinements(H), NewHs,
+    all_refinements(H0, NewHs),
     add_hyps(NewHs, Hyps0, Hyps), !,
     add1(refined),
     best_search(Hyps, H).
@@ -32,8 +57,14 @@ add_hyps(Hyps1, Hyps2, Hyps) :-
     mergesort(hyps1, OrderedHyps1),
     merge(Hyps2, OrderedHyp1, Hyps).
 
+not(A,B,C):-
+    A,
+    B,
+    C, !, fail.
+not(_,_,_).
+
 complete(Hyp) :-
-    \+ (ex(P),
+    not(ex(P),
         once(prove(P, Hyp, Answ)),
         Answ \== yes).
 
@@ -45,7 +76,7 @@ eval(Hyp, Cost) :-
 
 size([],0).
 size([Cs0/Vs0 | RestHyp], Size) :-
-    lenght(Cs0, L0),
+    length(Cs0, L0),
     length( Vs0, N0),
     size( RestHyp, SizeRest),
     Size is 10*L0 + N0 + SizeRest.
@@ -60,9 +91,11 @@ unsatisfiable([Head|Body], Hyp) :-
 start_hyps(Hyps) :-
     max_clauses(M),
     setof(C:H,
-        (   start_hyp(H,M), add1(generated),
-            complete(H, add1(complete), eval(H,C)),
-            Hyps)).
+        (   
+            start_hyp(H,M), add1(generated),
+            complete(H), add1(complete), eval(H,C)),
+            Hyps
+        ).
 
 start_hyp([], _).
 start_hyp([C|Cs], M) :-
@@ -72,13 +105,13 @@ start_hyp([C|Cs], M) :-
 
 refine_hyp(Hyp0, Hyp) :-
     choose_clause(Hyp0, Clause0/Vars0, Clauses1, Clauses2),
-    apend(Clauses1, [CLause/Vars | Clauses2], Hyp),
+    append(Clauses1, [CLause/Vars | Clauses2], Hyp),
     refine(Clauuse0, Vars0, Clause, Vars),
     non_redundant(Clause),
     \+ unsatisfiable(Clause, Hyp).
 
 choose_clause(Hyp, Clause, Clauses1, Clauses2) :-
-    apend(Clauses1, [Clause | Clauses2], Hyp),
+    append(Clauses1, [Clause | Clauses2], Hyp),
     nex(E),
     prove(E, [Clause], yes),
     !
@@ -91,7 +124,7 @@ refine(Clause, Args, Clause, NewArgs) :-
     append(Args1, Args2, NewArgs).
 
 refine(Clause, Args0, CLause, Args) :-
-    del(Var:Type, Args0, Args1),
+    delete(Var:Type, Args0, Args1),
     term(Type, Var, Vars),
     append(Args1, Vars, Args).
 
@@ -168,7 +201,7 @@ init_counts :-
     assert(counter(refined, 0)).
 
 add1(Counter) :-
-    retract(counter(Counter, N)), !, N1, N1 is N1 + 1,
+    retract(counter(Counter, N)), !, N1 is N + 1,
     assert(counter(COunter, N1)).
 
 show_counts :-
