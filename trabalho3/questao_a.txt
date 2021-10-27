@@ -1,0 +1,24 @@
+Utilizei os contadores do Hyper para descobrir o número de hipoteses geradas e refinadas como pedido da questão.
+Resultado:
+    MaxD = 0
+    MaxD = 1
+    MaxD = 2
+    MaxD = 3
+    MaxD = 4
+    MaxD = 5
+    MaxD = 6
+    MaxD = 7
+    MaxD = 8
+
+    Hypotheses generated: 373179
+    Hypotheses refined: 66518
+H = [[predecessor(_A, _B), [atom(_A), parent(_A, _C)], [atom(_C), predecessor(_C, _B)]]/[_A, _C, _B], [predecessor(_D, _E), [atom(_D), parent(_D, _E)]]/[_D, _E]].
+
+
+sequência de refinamentos completos com anomalia:
+parent(A, A)
+parent(A, C)
+parent(A, C), predecessor(B, B)
+parent(A, C), predecessor(C, B)
+parent(A, C), predecessor(C, B); parent(D, D)
+parent(A, C), predecessor(C, B); parent(D, E)
