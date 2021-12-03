@@ -1,0 +1,24 @@
+obs: a lista de comandos para executar os programas se encontra em comandos_uteis.txt
+
+Sobre as questões
+1.a consegui baixar 100 a 500 redações sem problemas
+    as redações se encontram em data/textos/textos.txt
+    o código se encontra em: uol_load_essays_bank.py
+
+2.b consegui adicionar as palavras que não estão no database do lexicon.pl sem problemas
+    as palavras se encontram em data/textos/desconhecidas.txt
+    o código se encontra em: adiciona_desconhecidas.pl
+
+2.c consegui adicionar as novas regras das palavras desconhecidas
+    utilizei a biblioteca spacy do python3 para descobrir o número, genero e classe gramatical
+    as novas regras são juntadas com as antigas e ficam salvas em: new_lexicon.pl
+    o codigo se encontra em cria_regras_desconhecidas.py
+
+2.  criei as funções que checam quantas frases válidas a gramaticaLP consegue encontrar nos textos.
+    checa_texto('data/textos/textos.txt', Qtd_validas, Qtd_total).
+
+    porém, não consegui utilizar o DCG visualizer. Toda vez que eu colocava as regras do new_lexicon.pl
+    e as regras do gramaticaLP para fazer os testes, ele dava erro e dizia que não havia recurso o suficiente.
+    Tentei debugar a gramatica com o trace, mas não consegui validar muitas frases.
+    No total, consegui 5 frases válidas de 886.
+    Esse resultado pode ser checado utilizando a função checa_texto acima.
